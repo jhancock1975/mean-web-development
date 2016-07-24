@@ -2,3 +2,4 @@
 *.tgz
 *.log
 *.swp
+node_modules

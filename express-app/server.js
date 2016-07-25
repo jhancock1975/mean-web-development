@@ -5,7 +5,7 @@ var mongoose = require('./config/mongoose'),
 
 var db = mongoose();
 var app = express();
-app.listen(3000);
+app.listen(3001);
 
 module.exports = app;
 

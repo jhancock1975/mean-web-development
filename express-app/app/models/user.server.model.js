@@ -42,4 +42,15 @@ UserSchema.virtual('fullName').get(function() {
   this.lastName = splitName[1] || ''; 
 });
 
+/**
+  gets executed after saving
+  */
+UserSchema.post('save', function(next) {
+  if(this.isNew) {
+    console.log('A new user was created.');
+  } else {
+    console.log('A user updated is details.');
+  }
+});
+
 mongoose.model('User', UserSchema);

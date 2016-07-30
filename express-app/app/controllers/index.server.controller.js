@@ -13,7 +13,6 @@ exports.render = function(req, res) {
 
   res.render('index', {
     title: 'Hello World',
-    bittle: 'Hello, Bittle!!!',
-    lastVisit: lastVisit
-  })
+    userFullName: req.user ? req.user.fullName : ''
+  });
 };

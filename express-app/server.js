@@ -7,9 +7,9 @@ var mongoose = require('./config/mongoose'),
 var db = mongoose();
 var app = express();
 var passport = passport();
-
-app.listen(3001);
+var portNum = 3001;
+app.listen(portNum);
 
 module.exports = app;
 
-console.log('Server running at http://localhost:3000/');
+console.log('Server running at http://localhost:' + portNum +'/');
